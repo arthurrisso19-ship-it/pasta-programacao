@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+}
+button {
+    font-size: 22px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 3px solid gray;
+    margin-left: 30%;
+}
+input[id="peso"] {
+    font-size: 20px;
+    padding: 10px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+input[id="altura"] {
+    border: 0.5px solid black;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 55px;
+}
+p[id="description"] {
+    text-align: center;
+    color: #666;
+    font-size: 30px;
+}
+p[id="copyright"] {
+    text-align: center;
+    color: #666;
+}
+header {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
