@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div>
+        <h1>Calculadora IMC</h1>
+        </div>
+        <div>
+        <p id="description">Calcule seu Índice de Massa Corporal:</p>
+
+        </div>
+        <div>
+
+        
+           Peso <input type ="number" id="peso" alt="Digite seu peso em kg" placeholder="Digite seu peso em kg">
+              </div>
+              <div>
+           Altura
+            <input type="number" id="altura" alt="Digite sua altura em metros" placeholder="Digite sua altura em metros">
+            </div>
+            <button onclick="calcularIMC()">Calcular IMC</button>
+    </header>
+    <script>
+        function calcularIMC() {
+            const peso = parseFloat(document.getElementById('peso').value);
+            const altura =  parseFloat(document.getElementById('altura').value);
+            const imc = peso / (altura * altura);
+            let resultado = '';
+            if (imc < 18.5) {
+                resultado = 'Abaixo do peso';
+            } else if (imc >= 18.5 && imc < 24.9) {
+                resultado = 'Peso normal';
+            } else if (imc >= 25 && imc < 29.9) {
+                resultado = 'Sobrepeso';
+            } else if (imc >= 30 && imc < 34.9) {
+                resultado = 'Obesidade';
+            }
+            else if (imc >= 35 && imc < 39.9) {
+                resultado = 'Obesidade severa';
+            } else if (imc >= 40) {
+                resultado = 'Obesidade mórbida';
+            }
+                  if (isNaN(imc) || imc <= 0) {
+                resultado = 'IMC inválido';
+            }
+            if (imc > 0) {
+                alert(`Seu imc é ${imc.toFixed(2)}. Classificação: ${resultado}`);
+            }
+            else {
+                alert(`Classificação: ${resultado}`);
+            }
+        }
+    </script>
+    <footer>
+        <p id="copyright">&copy; 2026 Calculadora IMC. Desenvolvida por Arthur.</p>
+    </footer>
+</body>
+</html>
